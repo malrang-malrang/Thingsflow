@@ -8,5 +8,5 @@
 import RxSwift
 
 protocol IssueRepositoryProtocol {
-    func fetchIssueList() -> Observable<[Issue]>
+    func fetchIssueList(text: String) -> Observable<[Issue]>
 }

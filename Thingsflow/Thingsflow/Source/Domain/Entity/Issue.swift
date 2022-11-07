@@ -10,5 +10,13 @@ import Foundation
 struct Issue: Decodable {
     let number: Int?
     let title: String?
-    let user: [User]?
+    let repositoryUrl: String?
+    let user: User?
+
+    private enum CodingKeys: String, CodingKey {
+        case number
+        case title
+        case repositoryUrl = "repository_url"
+        case user
+    }
 }

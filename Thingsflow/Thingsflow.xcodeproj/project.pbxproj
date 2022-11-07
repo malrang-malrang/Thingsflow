@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3034732F2919008000D7F712 /* UIStackView+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3034732E2919008000D7F712 /* UIStackView+Sugar.swift */; };
+		30347331291904FB00D7F712 /* AlertBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30347330291904FB00D7F712 /* AlertBuilder.swift */; };
+		30347333291905D900D7F712 /* Error+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30347332291905D900D7F712 /* Error+Sugar.swift */; };
+		3034733629190A6700D7F712 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3034733529190A6700D7F712 /* ImageDownloader.swift */; };
+		3034733829190A8700D7F712 /* ImageDownloaderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3034733729190A8700D7F712 /* ImageDownloaderError.swift */; };
+		3034733A2919108400D7F712 /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303473392919108400D7F712 /* ImageCacheManager.swift */; };
+		3034733C2919113900D7F712 /* UIImageView+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3034733B2919113900D7F712 /* UIImageView+Sugar.swift */; };
 		309D09A62918D56D00B020D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D09A52918D56D00B020D7 /* AppDelegate.swift */; };
 		309D09A82918D56D00B020D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D09A72918D56D00B020D7 /* SceneDelegate.swift */; };
 		309D09AF2918D56E00B020D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 309D09AE2918D56E00B020D7 /* Assets.xcassets */; };
@@ -29,6 +36,13 @@
 		309D09FE2918E2CB00B020D7 /* IssueRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D09FD2918E2CB00B020D7 /* IssueRepository.swift */; };
 		309D0A052918E8CD00B020D7 /* IssueRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D0A042918E8CD00B020D7 /* IssueRepositoryProtocol.swift */; };
 		309D0A072918E8FF00B020D7 /* IssueUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D0A062918E8FF00B020D7 /* IssueUseCase.swift */; };
+		309D0A092918EAA900B020D7 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D0A082918EAA900B020D7 /* AppCoordinator.swift */; };
+		309D0A0D2918EB1900B020D7 /* MainViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D0A0C2918EB1900B020D7 /* MainViewCoordinator.swift */; };
+		309D0A102918EB8300B020D7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D0A0F2918EB8300B020D7 /* MainViewController.swift */; };
+		309D0A122918EFD100B020D7 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D0A112918EFD100B020D7 /* MainViewModel.swift */; };
+		309D0A142918F13500B020D7 /* UIView+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D0A132918F13500B020D7 /* UIView+Sugar.swift */; };
+		309D0A172918FAB400B020D7 /* IssueListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D0A162918FAB400B020D7 /* IssueListCell.swift */; };
+		309D0A192918FAC000B020D7 /* IssueListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D0A182918FAC000B020D7 /* IssueListCellViewModel.swift */; };
 		61C5BFFA6F3C31AF786AD217 /* Pods_ThingsflowTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3BA0BD4DDDB9C68FBAF14B9 /* Pods_ThingsflowTests.framework */; };
 		7F05CF2FD0F804103F79EA8C /* Pods_Thingsflow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57D093B409BD3533F5CF1F3A /* Pods_Thingsflow.framework */; };
 		FC232FF404D9CE0385FB950B /* Pods_Thingsflow_ThingsflowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24745CECEBF7D5384DB9EC52 /* Pods_Thingsflow_ThingsflowUITests.framework */; };
@@ -54,6 +68,13 @@
 /* Begin PBXFileReference section */
 		226F9637E60C6D83C7B27B8D /* Pods-Thingsflow-ThingsflowUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thingsflow-ThingsflowUITests.release.xcconfig"; path = "Target Support Files/Pods-Thingsflow-ThingsflowUITests/Pods-Thingsflow-ThingsflowUITests.release.xcconfig"; sourceTree = "<group>"; };
 		24745CECEBF7D5384DB9EC52 /* Pods_Thingsflow_ThingsflowUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thingsflow_ThingsflowUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3034732E2919008000D7F712 /* UIStackView+Sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Sugar.swift"; sourceTree = "<group>"; };
+		30347330291904FB00D7F712 /* AlertBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBuilder.swift; sourceTree = "<group>"; };
+		30347332291905D900D7F712 /* Error+Sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Sugar.swift"; sourceTree = "<group>"; };
+		3034733529190A6700D7F712 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		3034733729190A8700D7F712 /* ImageDownloaderError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderError.swift; sourceTree = "<group>"; };
+		303473392919108400D7F712 /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
+		3034733B2919113900D7F712 /* UIImageView+Sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Sugar.swift"; sourceTree = "<group>"; };
 		309D09A22918D56D00B020D7 /* Thingsflow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thingsflow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		309D09A52918D56D00B020D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		309D09A72918D56D00B020D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +101,13 @@
 		309D09FD2918E2CB00B020D7 /* IssueRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueRepository.swift; sourceTree = "<group>"; };
 		309D0A042918E8CD00B020D7 /* IssueRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueRepositoryProtocol.swift; sourceTree = "<group>"; };
 		309D0A062918E8FF00B020D7 /* IssueUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueUseCase.swift; sourceTree = "<group>"; };
+		309D0A082918EAA900B020D7 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		309D0A0C2918EB1900B020D7 /* MainViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCoordinator.swift; sourceTree = "<group>"; };
+		309D0A0F2918EB8300B020D7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		309D0A112918EFD100B020D7 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		309D0A132918F13500B020D7 /* UIView+Sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Sugar.swift"; sourceTree = "<group>"; };
+		309D0A162918FAB400B020D7 /* IssueListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueListCell.swift; sourceTree = "<group>"; };
+		309D0A182918FAC000B020D7 /* IssueListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueListCellViewModel.swift; sourceTree = "<group>"; };
 		4197CD0F993564A6ACA36014 /* Pods-ThingsflowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThingsflowTests.release.xcconfig"; path = "Target Support Files/Pods-ThingsflowTests/Pods-ThingsflowTests.release.xcconfig"; sourceTree = "<group>"; };
 		57D093B409BD3533F5CF1F3A /* Pods_Thingsflow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thingsflow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74F9F391EAB27F4677F3EC4B /* Pods-Thingsflow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thingsflow.debug.xcconfig"; path = "Target Support Files/Pods-Thingsflow/Pods-Thingsflow.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,6 +145,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3034733429190A5000D7F712 /* ImageDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				3034733529190A6700D7F712 /* ImageDownloader.swift */,
+				3034733729190A8700D7F712 /* ImageDownloaderError.swift */,
+			);
+			path = ImageDownloader;
+			sourceTree = "<group>";
+		};
 		309D09992918D56D00B020D7 = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +208,7 @@
 		309D09D52918D7B500B020D7 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				309D0A082918EAA900B020D7 /* AppCoordinator.swift */,
 				309D09A52918D56D00B020D7 /* AppDelegate.swift */,
 				309D09A72918D56D00B020D7 /* SceneDelegate.swift */,
 			);
@@ -190,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				309D09EC2918DC1F00B020D7 /* Domain */,
+				309D0A0A2918EAF900B020D7 /* Presentation */,
 				309D09D82918D8D200B020D7 /* Data */,
 			);
 			path = Source;
@@ -200,6 +239,7 @@
 			children = (
 				309D09FB2918E2A000B020D7 /* Repository */,
 				309D09FA2918E28300B020D7 /* NetworkManager */,
+				3034733429190A5000D7F712 /* ImageDownloader */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -216,7 +256,11 @@
 		309D09E02918D9BE00B020D7 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				30347332291905D900D7F712 /* Error+Sugar.swift */,
 				309D09E12918D9CA00B020D7 /* Encodable+Sugar.swift */,
+				309D0A132918F13500B020D7 /* UIView+Sugar.swift */,
+				3034732E2919008000D7F712 /* UIStackView+Sugar.swift */,
+				3034733B2919113900D7F712 /* UIImageView+Sugar.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -225,6 +269,8 @@
 			isa = PBXGroup;
 			children = (
 				309D09E42918D9EA00B020D7 /* Json.swift */,
+				30347330291904FB00D7F712 /* AlertBuilder.swift */,
+				303473392919108400D7F712 /* ImageCacheManager.swift */,
 			);
 			path = Singleton;
 			sourceTree = "<group>";
@@ -309,6 +355,42 @@
 				309D0A062918E8FF00B020D7 /* IssueUseCase.swift */,
 			);
 			path = UseCase;
+			sourceTree = "<group>";
+		};
+		309D0A0A2918EAF900B020D7 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				309D0A0B2918EB0A00B020D7 /* Coordinator */,
+				309D0A0E2918EB7400B020D7 /* Main */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		309D0A0B2918EB0A00B020D7 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				309D0A0C2918EB1900B020D7 /* MainViewCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		309D0A0E2918EB7400B020D7 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				309D0A0F2918EB8300B020D7 /* MainViewController.swift */,
+				309D0A112918EFD100B020D7 /* MainViewModel.swift */,
+				309D0A152918FAA900B020D7 /* Cell */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		309D0A152918FAA900B020D7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				309D0A162918FAB400B020D7 /* IssueListCell.swift */,
+				309D0A182918FAC000B020D7 /* IssueListCellViewModel.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		3208362202F52C4340BA01CD /* Pods */ = {
@@ -572,20 +654,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3034732F2919008000D7F712 /* UIStackView+Sugar.swift in Sources */,
+				309D0A172918FAB400B020D7 /* IssueListCell.swift in Sources */,
+				3034733C2919113900D7F712 /* UIImageView+Sugar.swift in Sources */,
+				3034733829190A8700D7F712 /* ImageDownloaderError.swift in Sources */,
+				3034733629190A6700D7F712 /* ImageDownloader.swift in Sources */,
 				309D09E92918DA4400B020D7 /* NetworkManager.swift in Sources */,
 				309D09FE2918E2CB00B020D7 /* IssueRepository.swift in Sources */,
 				309D09E52918D9EA00B020D7 /* Json.swift in Sources */,
 				309D09E22918D9CA00B020D7 /* Encodable+Sugar.swift in Sources */,
+				3034733A2919108400D7F712 /* ImageCacheManager.swift in Sources */,
+				309D0A092918EAA900B020D7 /* AppCoordinator.swift in Sources */,
+				30347333291905D900D7F712 /* Error+Sugar.swift in Sources */,
 				309D09E72918DA1C00B020D7 /* Endpoint.swift in Sources */,
 				309D09DE2918D99400B020D7 /* Requestable.swift in Sources */,
+				309D0A142918F13500B020D7 /* UIView+Sugar.swift in Sources */,
 				309D09EF2918DC7300B020D7 /* Issue.swift in Sources */,
 				309D09A62918D56D00B020D7 /* AppDelegate.swift in Sources */,
+				30347331291904FB00D7F712 /* AlertBuilder.swift in Sources */,
 				309D09F12918DF2700B020D7 /* EndPointStrage.swift in Sources */,
 				309D0A072918E8FF00B020D7 /* IssueUseCase.swift in Sources */,
 				309D0A052918E8CD00B020D7 /* IssueRepositoryProtocol.swift in Sources */,
 				309D09F32918E00C00B020D7 /* User.swift in Sources */,
+				309D0A122918EFD100B020D7 /* MainViewModel.swift in Sources */,
+				309D0A0D2918EB1900B020D7 /* MainViewCoordinator.swift in Sources */,
 				309D09DC2918D95100B020D7 /* NetworkError.swift in Sources */,
+				309D0A102918EB8300B020D7 /* MainViewController.swift in Sources */,
 				309D09DA2918D8E700B020D7 /* HttpMethod.swift in Sources */,
+				309D0A192918FAC000B020D7 /* IssueListCellViewModel.swift in Sources */,
 				309D09A82918D56D00B020D7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

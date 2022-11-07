@@ -8,17 +8,17 @@
 import RxSwift
 
 protocol IssueUseCaseProtocol {
-    func fetchIssueList() -> Observable<[Issue]>
+    func fetchIssueList(text: String) -> Observable<[Issue]>
 }
 
 final class IssueUseCase: IssueUseCaseProtocol {
-    private let IssueRepository: IssueRepositoryProtocol
+    private let issueRepository: IssueRepositoryProtocol
 
-    init(IssueRepository: IssueRepositoryProtocol) {
-        self.IssueRepository = IssueRepository
+    init(issueRepository: IssueRepositoryProtocol) {
+        self.issueRepository = issueRepository
     }
 
-    func fetchIssueList() -> Observable<[Issue]> {
-        return self.IssueRepository.fetchIssueList()
+    func fetchIssueList(text: String) -> Observable<[Issue]> {
+        return self.issueRepository.fetchIssueList(text: text)
     }
 }

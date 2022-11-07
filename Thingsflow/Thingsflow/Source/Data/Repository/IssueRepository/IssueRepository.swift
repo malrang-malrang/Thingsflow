@@ -14,8 +14,8 @@ final class IssueRepository: IssueRepositoryProtocol {
         self.networkManager = networkManager
     }
 
-    func fetchIssueList() -> Observable<[Issue]> {
-        let endpoint = EndPointStrage.issueList.endpoint
+    func fetchIssueList(text: String) -> Observable<[Issue]> {
+        let endpoint = EndPointStrage.issueList(text: text).endpoint
         return self.networkManager.request(endPoint: endpoint)
             .decode(type: [Issue].self, decoder: Json.decoder)
     }
