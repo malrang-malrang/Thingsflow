@@ -114,12 +114,10 @@
 		309D09A42918D56D00B020D7 /* Thingsflow */ = {
 			isa = PBXGroup;
 			children = (
-				309D09A52918D56D00B020D7 /* AppDelegate.swift */,
-				309D09A72918D56D00B020D7 /* SceneDelegate.swift */,
-				309D09A92918D56D00B020D7 /* ViewController.swift */,
-				309D09AE2918D56E00B020D7 /* Assets.xcassets */,
-				309D09B02918D56E00B020D7 /* LaunchScreen.storyboard */,
 				309D09B32918D56E00B020D7 /* Info.plist */,
+				309D09D52918D7B500B020D7 /* Application */,
+				309D09D62918D7BC00B020D7 /* Resource */,
+				309D09D72918D7C100B020D7 /* Source */,
 			);
 			path = Thingsflow;
 			sourceTree = "<group>";
@@ -139,6 +137,32 @@
 				309D09C82918D56E00B020D7 /* ThingsflowUITestsLaunchTests.swift */,
 			);
 			path = ThingsflowUITests;
+			sourceTree = "<group>";
+		};
+		309D09D52918D7B500B020D7 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				309D09A52918D56D00B020D7 /* AppDelegate.swift */,
+				309D09A72918D56D00B020D7 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		309D09D62918D7BC00B020D7 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				309D09B02918D56E00B020D7 /* LaunchScreen.storyboard */,
+				309D09AE2918D56E00B020D7 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		309D09D72918D7C100B020D7 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				309D09A92918D56D00B020D7 /* ViewController.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 		3208362202F52C4340BA01CD /* Pods */ = {
