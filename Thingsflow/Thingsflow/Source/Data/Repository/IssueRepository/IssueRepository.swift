@@ -7,10 +7,6 @@
 
 import RxSwift
 
-protocol IssueRepositoryProtocol {
-    func fetchIssueList() -> Observable<[Issue]>
-}
-
 final class IssueRepository: IssueRepositoryProtocol {
     private let networkManager: Networkable
 
