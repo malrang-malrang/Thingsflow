@@ -7,12 +7,8 @@
 
 import Foundation
 
-struct IssueList: Decodable {
-    let issueList: [Issue]?
-}
-
 struct Issue: Decodable {
-    let number: String?
+    let number: Int?
     let title: String?
     let user: [User]?
 }

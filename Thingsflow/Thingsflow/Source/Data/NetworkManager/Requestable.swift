@@ -47,7 +47,7 @@ extension Requestable {
         guard let url = urlComponent.url else {
             return .failure(.urlError)
         }
-
+        print(url)
         return .success(url)
     }
 

@@ -26,6 +26,7 @@
 		309D09F32918E00C00B020D7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D09F22918E00C00B020D7 /* User.swift */; };
 		309D09F62918E16D00B020D7 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D09F52918E16D00B020D7 /* MockURLProtocol.swift */; };
 		309D09F82918E18D00B020D7 /* MockDataTestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D09F72918E18D00B020D7 /* MockDataTestManager.swift */; };
+		309D09FE2918E2CB00B020D7 /* IssueRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D09FD2918E2CB00B020D7 /* IssueRepository.swift */; };
 		61C5BFFA6F3C31AF786AD217 /* Pods_ThingsflowTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3BA0BD4DDDB9C68FBAF14B9 /* Pods_ThingsflowTests.framework */; };
 		7F05CF2FD0F804103F79EA8C /* Pods_Thingsflow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57D093B409BD3533F5CF1F3A /* Pods_Thingsflow.framework */; };
 		FC232FF404D9CE0385FB950B /* Pods_Thingsflow_ThingsflowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24745CECEBF7D5384DB9EC52 /* Pods_Thingsflow_ThingsflowUITests.framework */; };
@@ -74,6 +75,7 @@
 		309D09F22918E00C00B020D7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		309D09F52918E16D00B020D7 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		309D09F72918E18D00B020D7 /* MockDataTestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataTestManager.swift; sourceTree = "<group>"; };
+		309D09FD2918E2CB00B020D7 /* IssueRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueRepository.swift; sourceTree = "<group>"; };
 		4197CD0F993564A6ACA36014 /* Pods-ThingsflowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThingsflowTests.release.xcconfig"; path = "Target Support Files/Pods-ThingsflowTests/Pods-ThingsflowTests.release.xcconfig"; sourceTree = "<group>"; };
 		57D093B409BD3533F5CF1F3A /* Pods_Thingsflow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thingsflow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74F9F391EAB27F4677F3EC4B /* Pods-Thingsflow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thingsflow.debug.xcconfig"; path = "Target Support Files/Pods-Thingsflow/Pods-Thingsflow.debug.xcconfig"; sourceTree = "<group>"; };
@@ -192,12 +194,8 @@
 		309D09D82918D8D200B020D7 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				309D09E82918DA4400B020D7 /* NetworkManager.swift */,
-				309D09DB2918D95100B020D7 /* NetworkError.swift */,
-				309D09D92918D8E700B020D7 /* HttpMethod.swift */,
-				309D09DD2918D99400B020D7 /* Requestable.swift */,
-				309D09E62918DA1C00B020D7 /* Endpoint.swift */,
-				309D09F02918DF2700B020D7 /* EndPointStrage.swift */,
+				309D09FB2918E2A000B020D7 /* Repository */,
+				309D09FA2918E28300B020D7 /* NetworkManager */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -260,6 +258,35 @@
 				309D09BC2918D56E00B020D7 /* ThingsflowTests.swift */,
 			);
 			path = NetworkManagerTests;
+			sourceTree = "<group>";
+		};
+		309D09FA2918E28300B020D7 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				309D09E82918DA4400B020D7 /* NetworkManager.swift */,
+				309D09DB2918D95100B020D7 /* NetworkError.swift */,
+				309D09D92918D8E700B020D7 /* HttpMethod.swift */,
+				309D09DD2918D99400B020D7 /* Requestable.swift */,
+				309D09E62918DA1C00B020D7 /* Endpoint.swift */,
+				309D09F02918DF2700B020D7 /* EndPointStrage.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		309D09FB2918E2A000B020D7 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				309D09FC2918E2AC00B020D7 /* IssueRepository */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		309D09FC2918E2AC00B020D7 /* IssueRepository */ = {
+			isa = PBXGroup;
+			children = (
+				309D09FD2918E2CB00B020D7 /* IssueRepository.swift */,
+			);
+			path = IssueRepository;
 			sourceTree = "<group>";
 		};
 		3208362202F52C4340BA01CD /* Pods */ = {
@@ -524,6 +551,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				309D09E92918DA4400B020D7 /* NetworkManager.swift in Sources */,
+				309D09FE2918E2CB00B020D7 /* IssueRepository.swift in Sources */,
 				309D09E52918D9EA00B020D7 /* Json.swift in Sources */,
 				309D09E22918D9CA00B020D7 /* Encodable+Sugar.swift in Sources */,
 				309D09E72918DA1C00B020D7 /* Endpoint.swift in Sources */,
