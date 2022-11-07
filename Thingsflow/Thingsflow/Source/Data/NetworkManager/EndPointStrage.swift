@@ -9,24 +9,28 @@ import Foundation
 
 private enum Const {
     static let baseURL = "https://api.github.com"
-    static let basePath = "/repos/apple/swift/issues"
+    static let basePath = "/repos/"
 }
 
 enum EndPointStrage {
-    case issueList
+    case issueList(text: String)
 }
 
 extension EndPointStrage {
     var endpoint: Endpoint {
         switch self {
-        case .issueList:
-            return self.issueList()
+        case .issueList(text: let text):
+            return self.issueList(text: text)
         }
     }
 }
 
 extension EndPointStrage {
-    private func issueList() -> Endpoint {
-        return Endpoint(host: Const.baseURL, path: Const.basePath)
+    private func issueList(text: String) -> Endpoint {
+        return Endpoint(
+            host: Const.baseURL,
+            path: Const.basePath,
+            queryParameters: text
+        )
     }
 }

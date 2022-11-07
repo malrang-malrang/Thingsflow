@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol MainViewCoordinatorProtocol {}
+protocol MainViewCoordinatorProtocol: Alertable {}
 
 final class MainViewCoordinator: Coordinator, MainViewCoordinatorProtocol {
     var navigationController: UINavigationController
@@ -27,7 +27,8 @@ final class MainViewCoordinator: Coordinator, MainViewCoordinatorProtocol {
     }
 
     func start() {
-        let mainView = MainViewController(coordinator: self)
+        let mainViewModel = MainViewModel(issueUseCase: self.issueUseCase)
+        let mainView = MainViewController(viewModel: mainViewModel, coordinator: self)
         self.navigationController.pushViewController(mainView, animated: true)
     }
 }

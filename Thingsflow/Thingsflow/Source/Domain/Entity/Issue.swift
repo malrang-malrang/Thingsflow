@@ -8,7 +8,7 @@
 import Foundation
 
 struct Issue: Decodable {
-    let number: Int?
+    let number: String?
     let title: String?
-    let user: [User]?
+    let user: User?
 }

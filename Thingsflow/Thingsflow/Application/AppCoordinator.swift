@@ -23,7 +23,7 @@ final class AppCoordinator: Coordinator {
     var navigationController: UINavigationController
     var parentCoordinators: Coordinator?
     var childCoordinators: [Coordinator] = []
-    private let issueUseCase = IssueUseCase(IssueRepository: IssueRepository())
+    private let issueUseCase = IssueUseCase(issueRepository: IssueRepository())
 
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
