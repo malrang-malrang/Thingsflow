@@ -16,6 +16,9 @@
 		309D09C92918D56E00B020D7 /* ThingsflowUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D09C82918D56E00B020D7 /* ThingsflowUITestsLaunchTests.swift */; };
 		309D09DA2918D8E700B020D7 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D09D92918D8E700B020D7 /* HttpMethod.swift */; };
 		309D09DC2918D95100B020D7 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D09DB2918D95100B020D7 /* NetworkError.swift */; };
+		309D09DE2918D99400B020D7 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D09DD2918D99400B020D7 /* Requestable.swift */; };
+		309D09E22918D9CA00B020D7 /* Encodable+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D09E12918D9CA00B020D7 /* Encodable+Sugar.swift */; };
+		309D09E52918D9EA00B020D7 /* Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D09E42918D9EA00B020D7 /* Json.swift */; };
 		61C5BFFA6F3C31AF786AD217 /* Pods_ThingsflowTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3BA0BD4DDDB9C68FBAF14B9 /* Pods_ThingsflowTests.framework */; };
 		7F05CF2FD0F804103F79EA8C /* Pods_Thingsflow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57D093B409BD3533F5CF1F3A /* Pods_Thingsflow.framework */; };
 		FC232FF404D9CE0385FB950B /* Pods_Thingsflow_ThingsflowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24745CECEBF7D5384DB9EC52 /* Pods_Thingsflow_ThingsflowUITests.framework */; };
@@ -54,6 +57,9 @@
 		309D09C82918D56E00B020D7 /* ThingsflowUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingsflowUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		309D09D92918D8E700B020D7 /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
 		309D09DB2918D95100B020D7 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		309D09DD2918D99400B020D7 /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
+		309D09E12918D9CA00B020D7 /* Encodable+Sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Sugar.swift"; sourceTree = "<group>"; };
+		309D09E42918D9EA00B020D7 /* Json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Json.swift; sourceTree = "<group>"; };
 		4197CD0F993564A6ACA36014 /* Pods-ThingsflowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThingsflowTests.release.xcconfig"; path = "Target Support Files/Pods-ThingsflowTests/Pods-ThingsflowTests.release.xcconfig"; sourceTree = "<group>"; };
 		57D093B409BD3533F5CF1F3A /* Pods_Thingsflow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thingsflow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74F9F391EAB27F4677F3EC4B /* Pods-Thingsflow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thingsflow.debug.xcconfig"; path = "Target Support Files/Pods-Thingsflow/Pods-Thingsflow.debug.xcconfig"; sourceTree = "<group>"; };
@@ -120,6 +126,7 @@
 				309D09D52918D7B500B020D7 /* Application */,
 				309D09D62918D7BC00B020D7 /* Resource */,
 				309D09D72918D7C100B020D7 /* Source */,
+				309D09DF2918D9AF00B020D7 /* Utils */,
 			);
 			path = Thingsflow;
 			sourceTree = "<group>";
@@ -172,8 +179,34 @@
 			children = (
 				309D09D92918D8E700B020D7 /* HttpMethod.swift */,
 				309D09DB2918D95100B020D7 /* NetworkError.swift */,
+				309D09DD2918D99400B020D7 /* Requestable.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		309D09DF2918D9AF00B020D7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				309D09E32918D9D500B020D7 /* Singleton */,
+				309D09E02918D9BE00B020D7 /* Extension */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		309D09E02918D9BE00B020D7 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				309D09E12918D9CA00B020D7 /* Encodable+Sugar.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		309D09E32918D9D500B020D7 /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				309D09E42918D9EA00B020D7 /* Json.swift */,
+			);
+			path = Singleton;
 			sourceTree = "<group>";
 		};
 		3208362202F52C4340BA01CD /* Pods */ = {
@@ -437,6 +470,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				309D09E52918D9EA00B020D7 /* Json.swift in Sources */,
+				309D09E22918D9CA00B020D7 /* Encodable+Sugar.swift in Sources */,
+				309D09DE2918D99400B020D7 /* Requestable.swift in Sources */,
 				309D09A62918D56D00B020D7 /* AppDelegate.swift in Sources */,
 				309D09DC2918D95100B020D7 /* NetworkError.swift in Sources */,
 				309D09DA2918D8E700B020D7 /* HttpMethod.swift in Sources */,
