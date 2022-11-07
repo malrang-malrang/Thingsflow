@@ -7,20 +7,12 @@
 
 import Foundation
 
-struct Issue {
-    let number: String
-    let title: String
-    let user: [User]?
+struct IssueList: Decodable {
+    let issueList: [Issue]?
 }
 
-struct User {
-    let avatarImage: String?
-    let subscriptions: String?
-    let nickname: String?
-
-    private enum CodingKeys: String, CodingKey {
-        case avatarImage = "avatar_url"
-        case subscriptions = "subscriptions_url"
-        case nickname = "node_id"
-    }
+struct Issue: Decodable {
+    let number: String?
+    let title: String?
+    let user: [User]?
 }
