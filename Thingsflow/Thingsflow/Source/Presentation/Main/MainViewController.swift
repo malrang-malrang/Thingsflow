@@ -12,6 +12,7 @@ import SnapKit
 private enum Const {
     static let search = "Search"
     static let appleSwiftIssues = "apple/swift/issues"
+    static let cellImage = "https://s3.ap-northeast-2.amazonaws.com/hellobot-kr-test/image/main_logo.png"
 }
 
 final class MainViewController: UIViewController {
@@ -28,13 +29,17 @@ final class MainViewController: UIViewController {
 
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 30, weight: .bold)
+        label.font = .systemFont(ofSize: 40, weight: .bold)
 
         return label
     }()
 
     private let tableView: UITableView = {
         let tableView = UITableView()
+        tableView.register(
+            IssueListCell.self,
+            forCellReuseIdentifier: IssueListCell.identifier
+        )
 
         return tableView
     }()
@@ -74,7 +79,7 @@ final class MainViewController: UIViewController {
         }
 
         self.tableView.snp.makeConstraints {
-            $0.top.equalTo(self.titleLabel.snp.bottom)
+            $0.top.equalTo(self.titleLabel.snp.bottom).offset(10)
             $0.leading.bottom.trailing.equalToSuperview()
         }
     }
@@ -87,6 +92,12 @@ final class MainViewController: UIViewController {
                     title: error.identifier,
                     message: error.errorMessage
                 )
+            }
+            .disposed(by: self.disposeBag)
+
+        self.searchBarButton.rx.tap
+            .bind { [weak self] _ in
+                //검색팝업 띄우도록 해야함.
             }
             .disposed(by: self.disposeBag)
 
@@ -105,6 +116,12 @@ final class MainViewController: UIViewController {
                     return UITableViewCell()
                 }
 
+                if row == 5 {
+                    cell.insertImage(urlString: Const.cellImage)
+
+                    return cell
+                }
+
                 let cellViewModel = IssueListCellViewModel(issueInformation: element)
                 cell.bind(viewModel: cellViewModel)
 
@@ -114,7 +131,7 @@ final class MainViewController: UIViewController {
 
         self.tableView.rx.modelSelected(Issue.self)
             .bind { [weak self] issueInformation in
-
+                //셀 탭할시 DetailView로 화면전환 해야함.
             }
             .disposed(by: self.disposeBag)
     }

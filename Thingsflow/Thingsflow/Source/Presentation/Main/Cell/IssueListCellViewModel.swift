@@ -10,8 +10,7 @@ import Foundation
 protocol IssueListCellViewModelable: IssueListCellViewModelOutput {}
 
 protocol IssueListCellViewModelOutput {
-    var number: String { get }
-    var title: String { get }
+    var information: String { get }
 }
 
 private enum Const {
@@ -27,15 +26,12 @@ final class IssueListCellViewModel: IssueListCellViewModelable {
 
     // MARK: -  Output
 
-    var number: String {
-        guard let number = self.issueInformation.number else {
+    var information: String {
+        guard let number = self.issueInformation.number,
+              let title = self.issueInformation.title else {
             return Const.unknown
         }
 
-        return String(number)
-    }
-
-    var title: String {
-        return self.issueInformation.title ?? Const.unknown
+        return "\(number) - \(title)"
     }
 }

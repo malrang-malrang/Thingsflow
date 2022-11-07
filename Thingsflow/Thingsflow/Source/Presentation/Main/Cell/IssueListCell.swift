@@ -17,17 +17,18 @@ final class IssueListCell: UITableViewCell {
     private let contentsStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
+        stackView.spacing = 5
 
         return stackView
     }()
 
-    private let numberLabel: UILabel = {
-        let label = UILabel()
+    private let hellowBotImageView: UIImageView = {
+        let imageView = UIImageView()
 
-        return label
+        return imageView
     }()
 
-    private let titleLabel: UILabel = {
+    private let informationLabel: UILabel = {
         let label = UILabel()
 
         return label
@@ -44,19 +45,35 @@ final class IssueListCell: UITableViewCell {
     }
 
     private func setupContentsView() {
+        self.accessoryType = .disclosureIndicator
         self.contentView.backgroundColor = .systemBackground
         self.addSubview(self.contentsStackView)
-        self.contentsStackView.addArrangedSubviews(self.numberLabel, self.titleLabel)
+        self.contentsStackView.addArrangedSubviews(self.informationLabel)
     }
 
     private func setupConstraint() {
         self.contentsStackView.snp.makeConstraints {
-            $0.directionalEdges.equalToSuperview()
+            $0.top.equalToSuperview().offset(10)
+            $0.bottom.equalToSuperview().offset(-10)
+            $0.leading.equalToSuperview().inset(10)
+            $0.trailing.equalToSuperview().inset(40)
         }
     }
 
     func bind(viewModel: IssueListCellViewModelable) {
-        self.numberLabel.text = viewModel.number
-        self.titleLabel.text = viewModel.title
+        self.informationLabel.text = viewModel.information
+    }
+
+    func insertImage(urlString: String) {
+        self.accessoryType = .none
+        self.hellowBotImageView.setImage(with: urlString)
+        self.informationLabel.removeFromSuperview()
+        self.contentsStackView.addArrangedSubview(self.hellowBotImageView)
+    }
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.hellowBotImageView.image = nil
+        self.informationLabel.text = nil
     }
 }

@@ -10,6 +10,10 @@
 		3034732F2919008000D7F712 /* UIStackView+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3034732E2919008000D7F712 /* UIStackView+Sugar.swift */; };
 		30347331291904FB00D7F712 /* AlertBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30347330291904FB00D7F712 /* AlertBuilder.swift */; };
 		30347333291905D900D7F712 /* Error+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30347332291905D900D7F712 /* Error+Sugar.swift */; };
+		3034733629190A6700D7F712 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3034733529190A6700D7F712 /* ImageDownloader.swift */; };
+		3034733829190A8700D7F712 /* ImageDownloaderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3034733729190A8700D7F712 /* ImageDownloaderError.swift */; };
+		3034733A2919108400D7F712 /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303473392919108400D7F712 /* ImageCacheManager.swift */; };
+		3034733C2919113900D7F712 /* UIImageView+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3034733B2919113900D7F712 /* UIImageView+Sugar.swift */; };
 		309D09A62918D56D00B020D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D09A52918D56D00B020D7 /* AppDelegate.swift */; };
 		309D09A82918D56D00B020D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D09A72918D56D00B020D7 /* SceneDelegate.swift */; };
 		309D09AF2918D56E00B020D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 309D09AE2918D56E00B020D7 /* Assets.xcassets */; };
@@ -67,6 +71,10 @@
 		3034732E2919008000D7F712 /* UIStackView+Sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Sugar.swift"; sourceTree = "<group>"; };
 		30347330291904FB00D7F712 /* AlertBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBuilder.swift; sourceTree = "<group>"; };
 		30347332291905D900D7F712 /* Error+Sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Sugar.swift"; sourceTree = "<group>"; };
+		3034733529190A6700D7F712 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		3034733729190A8700D7F712 /* ImageDownloaderError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderError.swift; sourceTree = "<group>"; };
+		303473392919108400D7F712 /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
+		3034733B2919113900D7F712 /* UIImageView+Sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Sugar.swift"; sourceTree = "<group>"; };
 		309D09A22918D56D00B020D7 /* Thingsflow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thingsflow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		309D09A52918D56D00B020D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		309D09A72918D56D00B020D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +145,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3034733429190A5000D7F712 /* ImageDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				3034733529190A6700D7F712 /* ImageDownloader.swift */,
+				3034733729190A8700D7F712 /* ImageDownloaderError.swift */,
+			);
+			path = ImageDownloader;
+			sourceTree = "<group>";
+		};
 		309D09992918D56D00B020D7 = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +239,7 @@
 			children = (
 				309D09FB2918E2A000B020D7 /* Repository */,
 				309D09FA2918E28300B020D7 /* NetworkManager */,
+				3034733429190A5000D7F712 /* ImageDownloader */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -242,6 +260,7 @@
 				309D09E12918D9CA00B020D7 /* Encodable+Sugar.swift */,
 				309D0A132918F13500B020D7 /* UIView+Sugar.swift */,
 				3034732E2919008000D7F712 /* UIStackView+Sugar.swift */,
+				3034733B2919113900D7F712 /* UIImageView+Sugar.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -251,6 +270,7 @@
 			children = (
 				309D09E42918D9EA00B020D7 /* Json.swift */,
 				30347330291904FB00D7F712 /* AlertBuilder.swift */,
+				303473392919108400D7F712 /* ImageCacheManager.swift */,
 			);
 			path = Singleton;
 			sourceTree = "<group>";
@@ -636,10 +656,14 @@
 			files = (
 				3034732F2919008000D7F712 /* UIStackView+Sugar.swift in Sources */,
 				309D0A172918FAB400B020D7 /* IssueListCell.swift in Sources */,
+				3034733C2919113900D7F712 /* UIImageView+Sugar.swift in Sources */,
+				3034733829190A8700D7F712 /* ImageDownloaderError.swift in Sources */,
+				3034733629190A6700D7F712 /* ImageDownloader.swift in Sources */,
 				309D09E92918DA4400B020D7 /* NetworkManager.swift in Sources */,
 				309D09FE2918E2CB00B020D7 /* IssueRepository.swift in Sources */,
 				309D09E52918D9EA00B020D7 /* Json.swift in Sources */,
 				309D09E22918D9CA00B020D7 /* Encodable+Sugar.swift in Sources */,
+				3034733A2919108400D7F712 /* ImageCacheManager.swift in Sources */,
 				309D0A092918EAA900B020D7 /* AppCoordinator.swift in Sources */,
 				30347333291905D900D7F712 /* Error+Sugar.swift in Sources */,
 				309D09E72918DA1C00B020D7 /* Endpoint.swift in Sources */,
